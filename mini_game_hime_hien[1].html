@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game - Hime Hiền</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mini Game - Hime Hiền</h1>
+        <div class="question">
+            <label for="q1">1. Đồng hồ đã xuất hiện trong bao nhiêu hình ảnh, phim, và video của Hime Hiền?</label>
+            <input type="text" id="q1">
+        </div>
+        <div class="question">
+            <label for="q2">2. Kính đã xuất hiện trong bao nhiêu hình ảnh, phim, và video của Hime Hiền?</label>
+            <input type="text" id="q2">
+        </div>
+        <div class="question">
+            <label for="q3">3. Khi nhắc đến 'Hiền lửa,' bạn sẽ nghĩ ngay đến Hime Hiền cầm đồ vật gì?</label>
+            <input type="text" id="q3">
+        </div>
+        <button class="submit-btn" onclick="submitAnswers()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function submitAnswers() {
+            const answer1 = document.getElementById('q1').value;
+            const answer2 = document.getElementById('q2').value;
+            const answer3 = document.getElementById('q3').value;
+
+            if (answer1 && answer2 && answer3) {
+                document.getElementById('message').textContent = "Cảm ơn bạn đã tham gia!";
+            } else {
+                document.getElementById('message').textContent = "Vui lòng trả lời tất cả các câu hỏi.";
+            }
+        }
+    </script>
+</body>
+</html>
